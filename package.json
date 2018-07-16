@@ -1,0 +1,59 @@
+{
+  "name": "@blitz/monaco-template-syntax",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "description": "Syntax highlighting for ES6 template literals",
+  "scripts": {
+    "build": "rm -rf lib; tsc",
+    "start": "parcel serve ./demo/index.html --open",
+    "build:demo": "rm -rf dist; parcel build ./demo/index.html",
+    "release": "yarn test && yarn clean && yarn build && yarn publish && yarn clean",
+    "test": "jest --verbose",
+    "precommit": "pretty-quick --staged",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^23.1.4",
+    "husky": "^0.14.3",
+    "jest": "^23.3.0",
+    "monaco-editor": "^0.13.1",
+    "prettier": "1.13.7",
+    "pretty-quick": "^1.6.0",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.9.2"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "**/__tests__/*.spec.(ts|tsx|js)"
+    ]
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "keywords": [],
+  "homepage": "https://github.com/stackblitz/monaco-template-syntax",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stackblitz/monaco-template-syntax.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stackblitz/monaco-template-syntax/issues"
+  },
+  "author": "Sam Denty <samddenty@gmail.com> (http://github.com/samdenty99)",
+  "license": "MIT"
+}
